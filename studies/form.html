@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="name" placeholder="Name">
+		<input type="text" name="age" placeholder="Age">
+		<input type="text" name="email" placeholder="Email">
+		<button type="submit">Submit</button>
+	</form>
+
+<script>
+	document.querySelector('form').addEventListener('submit', function (e) {
+		e.preventDefault();
+
+		const form = new FormData(e.target);
+
+		console.log(form.get('name'));
+		console.log(form.get('age'));
+		console.log(form.get('email'));
+	});
+</script>
+</body>
+</html>
